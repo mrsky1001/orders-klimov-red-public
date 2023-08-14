@@ -1,0 +1,908 @@
+<!--
+  ~ Copyright (c) Kolyada N.V. <mrsky1001.work@gmail.com> 2023
+  -->
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="icon" href='./favicon.svg'/>
+<!--    <script src="../node_modules/flowbite/dist/flowbite.js"></script>-->
+    <script src="https://cdn.tiny.cloud/1/a0ijmuegf97wcitfcjbqekt4zuq9huhhxhs82hblex68xzkd/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    
+		<link href="./_app/immutable/assets/0.78e12217.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.13e00a72.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.6980a343.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.784da650.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.a70ae2f0.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.de48be0e.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.ce9fe9c4.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/2.66aba1c7.js">
+    <title>Страница тестирования реализации алгоритма решения проблемы оптимального раскроя ЗЛП
+        симплекс-методом.</title>
+</head>
+<body data-sveltekit-preload-data="hover">
+<div style="display: contents">
+
+
+
+
+
+
+
+
+
+<header class="sticky top-0 z-40 flex-none w-full mx-auto bg-white border-b border-gray-200 dark:border-gray-600 dark:bg-gray-800"><nav class="bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-200 border-gray-100 dark:border-gray-700 px-2 sm:px-4 py-2.5 w-full"><div class="mx-auto flex flex-wrap justify-between items-center  container">
+
+
+
+<a href="https://github.com/mrsky1001/cutting-minimum-remainder-public" title="Проект на GitHub" class="flex items-center group" target="_blank">
+
+<svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" data-view-component="true" class="octicon octicon-mark-github v-align-middle color-fg-default"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path></svg>
+        <span></span></a>
+        <button type="button" class="focus:outline-none whitespace-normal m-0.5 rounded-lg focus:ring-2 p-1.5 focus:ring-gray-400  hover:bg-gray-100 dark:hover:bg-gray-600 ml-3 md:hidden" aria-label="Open main menu"><span class="sr-only">Open main menu</span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="h-6 w-6 shrink-0" aria-label="bars 3" fill="none" viewBox="0 0 24 24" stroke-width="2"><!-- HTML_TAG_START --><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path> <!-- HTML_TAG_END --></svg></button>
+        <div class="w-full md:block md:w-auto" hidden><ul class="flex flex-col p-4 mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+
+
+
+<a href="https://mrsky1001.github.io/cutting-minimum-remainder/" title="Страница тестирования расчет оптимального раскроя" data-sveltekit-preload-data="off" class="block py-2 pr-4 pl-3 rounded md:border-0 text-gray-700 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent text-base font-semibold flex flex-row items-center">
+        <span>Калькулятор</span></a></ul></div></div></nav>
+</header>
+
+
+
+<div class="fixed items-end p-4 z-10 min-w-[300px] flex flex-col right-0"></div>
+
+
+
+
+<div class="w-full px-4 mx-auto max-w-8xl"><div class="lg:flex"><main class="flex-auto w-full min-w-0 lg:static lg:max-h-full lg:overflow-visible"><div class="flex w-full"><div class="flex-auto max-w-8xl min-w-0 pt-6 lg:px-8 lg:pt-8 pb:12 xl:pb-24 lg:pb-16">
+
+
+<section class="bg-white dark:bg-gray-900"><div class="py-8 px-4 max-w-2xl lg:py-16"><h1 class="mb-4 text-[38px] font-bold text-gray-900 dark:text-white">О заказе</h1>
+        <form action="#"><div class="grid sm:grid-cols-2 gap-x-6 gap-y-4"><div>
+
+
+
+<div class="">
+
+
+
+<label for="creatingDate" class="block mb-2 font-medium text-gray-900 dark:text-white">Дата создания</label>
+        
+
+
+<input id="creatingDate" type="text" name="creatingDate"  required placeholder="Выберите дату..." title="Выберите дату..." value="2023-08-14" class="border border-gray-300
+                     focus:ring-primary-600 focus:border-primary-600 block
+                     dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
+                     undefined w-full text-gray-900 rounded-lg"></div></div>
+                <div></div>
+                <div>
+
+
+
+<div class="">
+
+
+
+<label for="numberSpecification" class="block mb-2 font-medium text-gray-900 dark:text-white">Номер спецификации</label>
+        
+
+
+<input id="numberSpecification" type="text" name="numberSpecification"  required placeholder="Введите номер спецификации..." title="Введите номер спецификации..." class="border border-gray-300
+                     focus:ring-primary-600 focus:border-primary-600 block
+                     dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
+                     undefined w-full text-gray-900 rounded-lg"></div></div>
+                <div>
+
+
+
+
+
+
+
+<label for="company" class="block mb-2 font-medium text-gray-900 dark:text-white">Клиент</label>
+
+
+
+
+
+
+<button id="dropdownDefaultButton" class="relative inline-flex justify-between items-center bg-[white] border border-[transparent]   rounded-lg  ring-1 ring-gray-300 focus:shadow-outline focus:ring-blue-600 focus:border-blue-600 w-full mt-[1px] px-[12px] py-[7px] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-gray" type="button" title="Выберите клиента..."><input class="w-full bg-white" value="Выберите клиента..." disabled>
+    <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path></svg></button>
+<div id="dropdown" hidden class="absolute z-10 bg-[white] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"><ul class="py-2 text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton"><li><a href="#" class="block px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200">ООО Транзит</a>
+            </li><li><a href="#" class="block px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200">ИП Иванов</a>
+            </li><li><a href="#" class="block px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200">Самозанятый Ласточкин</a>
+            </li></ul>
+</div></div>
+                <div>
+
+
+
+
+
+
+
+<label for="manager" class="block mb-2 font-medium text-gray-900 dark:text-white">Менеджер</label>
+
+
+
+
+
+
+<button id="dropdownDefaultButton" class="relative inline-flex justify-between items-center bg-[white] border border-[transparent]   rounded-lg  ring-1 ring-gray-300 focus:shadow-outline focus:ring-blue-600 focus:border-blue-600 w-full mt-[1px] px-[12px] py-[7px] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-gray" type="button" title="Выберите менеджера..."><input class="w-full bg-white" value="Выберите менеджера..." disabled>
+    <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path></svg></button>
+<div id="dropdown" hidden class="absolute z-10 bg-[white] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"><ul class="py-2 text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton"><li><a href="#" class="block px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200">Николай Поздняков</a>
+            </li><li><a href="#" class="block px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200">Дмитрий Рудин</a>
+            </li></ul>
+</div></div>
+                <div>
+
+
+
+
+
+
+
+<label for="worker" class="block mb-2 font-medium text-gray-900 dark:text-white">Ответственный на производстве</label>
+
+
+
+
+
+
+<button id="dropdownDefaultButton" class="relative inline-flex justify-between items-center bg-[white] border border-[transparent]   rounded-lg  ring-1 ring-gray-300 focus:shadow-outline focus:ring-blue-600 focus:border-blue-600 w-full mt-[1px] px-[12px] py-[7px] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-gray" type="button" title="Выберите сотрудника..."><input class="w-full bg-white" value="Выберите сотрудника..." disabled>
+    <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path></svg></button>
+<div id="dropdown" hidden class="absolute z-10 bg-[white] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"><ul class="py-2 text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton"><li><a href="#" class="block px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200">Эдуард Рябов</a>
+            </li><li><a href="#" class="block px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200">Василий Петров</a>
+            </li></ul>
+</div></div>
+                <div>
+
+
+
+
+
+
+
+<label for="comment" class="block mb-2 font-medium text-gray-900 dark:text-white">Примечание к заказу</label>
+
+
+
+<textarea id="comment" name="comment"  required placeholder="Введите примечание..." title="Введите примечание..." class="border border-gray-300 text-gray-900   rounded-lg focus:bg-[white] focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5
+                                                         dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
+                                                          undefined"></textarea></div></div></form></div></section>
+
+                        <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+
+                        
+
+
+<div class="flex justify-around">
+
+
+<section class="dark:bg-gray-900"><div class="p-4 mx-auto max-w-6xl"><h2 class="mb-4 text-[28px] font-bold text-gray-900 dark:text-white">Комплектация</h2>
+        <form action="#"><div class="grid">
+
+<div>
+
+
+
+<div class="flex">
+
+
+<input id="qT_xCkwtRutY448EsXK5q" type="checkbox" name="qT_xCkwtRutY448EsXK5q"  required placeholder="" title="" class="border border-gray-300
+                     focus:ring-primary-600 focus:border-primary-600 block
+                     dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
+                     undefined mr-2  text-blue-600 w-4 h-4 rounded">
+        
+
+
+
+<label for="qT_xCkwtRutY448EsXK5q" class="block mb-2 font-medium text-gray-900 dark:text-white">Дверная коробка</label></div>
+    </div>
+
+<div>
+
+
+
+<div class="flex">
+
+
+<input id="eiw7BZ9A-X3RAFB9KYXvk" type="checkbox" name="eiw7BZ9A-X3RAFB9KYXvk"  required placeholder="" title="" class="border border-gray-300
+                     focus:ring-primary-600 focus:border-primary-600 block
+                     dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
+                     undefined mr-2  text-blue-600 w-4 h-4 rounded">
+        
+
+
+
+<label for="eiw7BZ9A-X3RAFB9KYXvk" class="block mb-2 font-medium text-gray-900 dark:text-white">Торец/Каркас полотна </label></div>
+    </div>
+
+<div>
+
+
+
+<div class="flex">
+
+
+<input id="W762S4pjZ81aN60N8sRK_" type="checkbox" name="W762S4pjZ81aN60N8sRK_"  required placeholder="" title="" class="border border-gray-300
+                     focus:ring-primary-600 focus:border-primary-600 block
+                     dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
+                     undefined mr-2  text-blue-600 w-4 h-4 rounded">
+        
+
+
+
+<label for="W762S4pjZ81aN60N8sRK_" class="block mb-2 font-medium text-gray-900 dark:text-white">Петли </label></div>
+    </div>
+
+<div>
+
+
+
+<div class="flex">
+
+
+<input id="6O1CLqAozLPZdXwHDRvVa" type="checkbox" name="6O1CLqAozLPZdXwHDRvVa"  required placeholder="" title="" class="border border-gray-300
+                     focus:ring-primary-600 focus:border-primary-600 block
+                     dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
+                     undefined mr-2  text-blue-600 w-4 h-4 rounded">
+        
+
+
+
+<label for="6O1CLqAozLPZdXwHDRvVa" class="block mb-2 font-medium text-gray-900 dark:text-white">Замок и отвертка </label></div>
+    </div>
+
+<div>
+
+
+
+<div class="flex">
+
+
+<input id="6_Z6gzfcI4hWvK5fZKneL" type="checkbox" name="6_Z6gzfcI4hWvK5fZKneL"  required placeholder="" title="" class="border border-gray-300
+                     focus:ring-primary-600 focus:border-primary-600 block
+                     dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
+                     undefined mr-2  text-blue-600 w-4 h-4 rounded">
+        
+
+
+
+<label for="6_Z6gzfcI4hWvK5fZKneL" class="block mb-2 font-medium text-gray-900 dark:text-white">Уплотнитель </label></div>
+    </div>
+
+<div>
+
+
+
+<div class="flex">
+
+
+<input id="xESMfkZHE3Fge2kjxWv7V" type="checkbox" name="xESMfkZHE3Fge2kjxWv7V"  required placeholder="" title="" class="border border-gray-300
+                     focus:ring-primary-600 focus:border-primary-600 block
+                     dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
+                     undefined mr-2  text-blue-600 w-4 h-4 rounded">
+        
+
+
+
+<label for="xESMfkZHE3Fge2kjxWv7V" class="block mb-2 font-medium text-gray-900 dark:text-white">Сухари/уголки для сборки</label></div>
+    </div>
+
+<div>
+
+
+
+<div class="flex">
+
+
+<input id="cGkECIgqr1a2dPn9WG9eU" type="checkbox" name="cGkECIgqr1a2dPn9WG9eU"  required placeholder="" title="" class="border border-gray-300
+                     focus:ring-primary-600 focus:border-primary-600 block
+                     dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
+                     undefined mr-2  text-blue-600 w-4 h-4 rounded">
+        
+
+
+
+<label for="cGkECIgqr1a2dPn9WG9eU" class="block mb-2 font-medium text-gray-900 dark:text-white">Монтажные пластины </label></div>
+    </div>
+
+<div>
+
+
+
+<div class="flex">
+
+
+<input id="TKc0v8ighDtT5TBfnHhNq" type="checkbox" name="TKc0v8ighDtT5TBfnHhNq"  required placeholder="" title="" class="border border-gray-300
+                     focus:ring-primary-600 focus:border-primary-600 block
+                     dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
+                     undefined mr-2  text-blue-600 w-4 h-4 rounded">
+        
+
+
+
+<label for="TKc0v8ighDtT5TBfnHhNq" class="block mb-2 font-medium text-gray-900 dark:text-white">Штукатурная сетка </label></div>
+    </div></div></form></div></section>
+    
+
+
+<section class="dark:bg-gray-900"><div class="p-4 mx-auto max-w-6xl"><h2 class="mb-4 text-[28px] font-bold text-gray-900 dark:text-white">Обработка</h2>
+        <form action="#"><div class="grid">
+
+<div>
+
+
+
+<div class="flex">
+
+
+<input id="BSbzgpYZi6XqMfDQ0dzFU" type="checkbox" name="BSbzgpYZi6XqMfDQ0dzFU"  required placeholder="" title="" class="border border-gray-300
+                     focus:ring-primary-600 focus:border-primary-600 block
+                     dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
+                     undefined mr-2  text-blue-600 w-4 h-4 rounded">
+        
+
+
+
+<label for="BSbzgpYZi6XqMfDQ0dzFU" class="block mb-2 font-medium text-gray-900 dark:text-white">Расчет количества без мех обработки</label></div>
+    </div>
+
+<div>
+
+
+
+<div class="flex">
+
+
+<input id="4Bezz0eeYX8r8ebErUQc8" type="checkbox" name="4Bezz0eeYX8r8ebErUQc8"  required placeholder="" title="" class="border border-gray-300
+                     focus:ring-primary-600 focus:border-primary-600 block
+                     dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
+                     undefined mr-2  text-blue-600 w-4 h-4 rounded">
+        
+
+
+
+<label for="4Bezz0eeYX8r8ebErUQc8" class="block mb-2 font-medium text-gray-900 dark:text-white">Пилим для транспортной</label></div>
+    </div>
+
+<div>
+
+
+
+<div class="flex">
+
+
+<input id="9ggZtPAxi79toNBJAEDFj" type="checkbox" name="9ggZtPAxi79toNBJAEDFj"  required placeholder="" title="" class="border border-gray-300
+                     focus:ring-primary-600 focus:border-primary-600 block
+                     dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
+                     undefined mr-2  text-blue-600 w-4 h-4 rounded">
+        
+
+
+
+<label for="9ggZtPAxi79toNBJAEDFj" class="block mb-2 font-medium text-gray-900 dark:text-white">Мех. обработка профиля</label></div>
+    <div class="ml-6">
+
+<div>
+
+
+
+<div class="flex">
+
+
+<input id="_7ZII-H0Qa1g6yiCgq2ym" type="checkbox" name="_7ZII-H0Qa1g6yiCgq2ym"  required placeholder="" title="" class="border border-gray-300
+                     focus:ring-primary-600 focus:border-primary-600 block
+                     dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
+                     undefined mr-2  text-blue-600 w-4 h-4 rounded">
+        
+
+
+
+<label for="_7ZII-H0Qa1g6yiCgq2ym" class="block mb-2 font-medium text-gray-900 dark:text-white">Пилим коробку под размер полотна (между полом и полотном 15 мм) </label></div>
+    </div>
+        </div><div class="ml-6">
+
+<div>
+
+
+
+<div class="flex">
+
+
+<input id="kd8Kzbb-Tvm4lMsN8mPF8" type="checkbox" name="kd8Kzbb-Tvm4lMsN8mPF8"  required placeholder="" title="" class="border border-gray-300
+                     focus:ring-primary-600 focus:border-primary-600 block
+                     dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
+                     undefined mr-2  text-blue-600 w-4 h-4 rounded">
+        
+
+
+
+<label for="kd8Kzbb-Tvm4lMsN8mPF8" class="block mb-2 font-medium text-gray-900 dark:text-white">Пилим торец в размер полотна </label></div>
+    <div class="ml-6">
+
+<div>
+
+
+
+<div class="flex">
+
+
+<input id="B5KNuUhPBG75Cq8bKeeo3" type="checkbox" name="B5KNuUhPBG75Cq8bKeeo3"  required placeholder="" title="" class="border border-gray-300
+                     focus:ring-primary-600 focus:border-primary-600 block
+                     dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
+                     undefined mr-2  text-blue-600 w-4 h-4 rounded">
+        
+
+
+
+<label for="B5KNuUhPBG75Cq8bKeeo3" class="block mb-2 font-medium text-gray-900 dark:text-white">С запасом +20 мм</label></div>
+    </div>
+        </div><div class="ml-6">
+
+<div>
+
+
+
+<div class="flex">
+
+
+<input id="otNSAphDTb5577JPBqlJz" type="checkbox" name="otNSAphDTb5577JPBqlJz"  required placeholder="" title="" class="border border-gray-300
+                     focus:ring-primary-600 focus:border-primary-600 block
+                     dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
+                     undefined mr-2  text-blue-600 w-4 h-4 rounded">
+        
+
+
+
+<label for="otNSAphDTb5577JPBqlJz" class="block mb-2 font-medium text-gray-900 dark:text-white">С запилом под 45 (без запаса)</label></div>
+    </div>
+        </div><div class="ml-6">
+
+<div>
+
+
+
+<div class="flex">
+
+
+<input id="1ZSG7MYtTgfzyRER-O_LF" type="checkbox" name="1ZSG7MYtTgfzyRER-O_LF"  required placeholder="" title="" class="border border-gray-300
+                     focus:ring-primary-600 focus:border-primary-600 block
+                     dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
+                     undefined mr-2  text-blue-600 w-4 h-4 rounded">
+        
+
+
+
+<label for="1ZSG7MYtTgfzyRER-O_LF" class="block mb-2 font-medium text-gray-900 dark:text-white">Отрезаем контактные пятна 40мм</label></div>
+    </div>
+        </div></div>
+        </div><div class="ml-6">
+
+<div>
+
+
+
+<div class="flex">
+
+
+<input id="Sikz-aW-Xv9shxU6KhKAt" type="checkbox" name="Sikz-aW-Xv9shxU6KhKAt"  required placeholder="" title="" class="border border-gray-300
+                     focus:ring-primary-600 focus:border-primary-600 block
+                     dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
+                     undefined mr-2  text-blue-600 w-4 h-4 rounded">
+        
+
+
+
+<label for="Sikz-aW-Xv9shxU6KhKAt" class="block mb-2 font-medium text-gray-900 dark:text-white">Фрезеровка коробки под петли и отвертку замка </label></div>
+    </div>
+        </div><div class="ml-6">
+
+<div>
+
+
+
+<div class="flex">
+
+
+<input id="YSgWNzeWP4eRj-PD27I5E" type="checkbox" name="YSgWNzeWP4eRj-PD27I5E"  required placeholder="" title="" class="border border-gray-300
+                     focus:ring-primary-600 focus:border-primary-600 block
+                     dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
+                     undefined mr-2  text-blue-600 w-4 h-4 rounded">
+        
+
+
+
+<label for="YSgWNzeWP4eRj-PD27I5E" class="block mb-2 font-medium text-gray-900 dark:text-white">Фрезеровка торца/каркаса под петли и замок </label></div>
+    </div>
+        </div><div class="ml-6">
+
+<div>
+
+
+
+<div class="flex">
+
+
+<input id="ILC1rEEymmG3MTPYo4wv_" type="checkbox" name="ILC1rEEymmG3MTPYo4wv_"  required placeholder="" title="" class="border border-gray-300
+                     focus:ring-primary-600 focus:border-primary-600 block
+                     dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
+                     undefined mr-2  text-blue-600 w-4 h-4 rounded">
+        
+
+
+
+<label for="ILC1rEEymmG3MTPYo4wv_" class="block mb-2 font-medium text-gray-900 dark:text-white">Фрезеровка под нестандартную фурнитуру </label></div>
+    </div>
+        </div><div class="ml-6">
+
+<div>
+
+
+
+<div class="flex">
+
+
+<input id="I4SbDKe6PkSObiWNApuVu" type="checkbox" name="I4SbDKe6PkSObiWNApuVu"  required placeholder="" title="" class="border border-gray-300
+                     focus:ring-primary-600 focus:border-primary-600 block
+                     dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
+                     undefined mr-2  text-blue-600 w-4 h-4 rounded">
+        
+
+
+
+<label for="I4SbDKe6PkSObiWNApuVu" class="block mb-2 font-medium text-gray-900 dark:text-white">На них реверсивных полотен прямой торец </label></div>
+    </div>
+        </div><div class="ml-6">
+
+<div>
+
+
+
+<div class="flex">
+
+
+<input id="7nUiIWX3GJBwJG01h7rEj" type="checkbox" name="7nUiIWX3GJBwJG01h7rEj"  required placeholder="" title="" class="border border-gray-300
+                     focus:ring-primary-600 focus:border-primary-600 block
+                     dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
+                     undefined mr-2  text-blue-600 w-4 h-4 rounded">
+        
+
+
+
+<label for="7nUiIWX3GJBwJG01h7rEj" class="block mb-2 font-medium text-gray-900 dark:text-white">На верх полотен без поперечины прямой торец </label></div>
+    </div>
+        </div><div class="ml-6">
+
+<div>
+
+
+
+<div class="flex">
+
+
+<input id="y_MyxDvf6zRtZruLznS4O" type="checkbox" name="y_MyxDvf6zRtZruLznS4O"  required placeholder="" title="" class="border border-gray-300
+                     focus:ring-primary-600 focus:border-primary-600 block
+                     dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
+                     undefined mr-2  text-blue-600 w-4 h-4 rounded">
+        
+
+
+
+<label for="y_MyxDvf6zRtZruLznS4O" class="block mb-2 font-medium text-gray-900 dark:text-white">Для дверей без верхней поперечины +50мм сверху </label></div>
+    </div>
+        </div></div></div></form></div></section></div>
+
+
+
+<section class="dark:bg-gray-900"><div class="p-4 mx-auto"><h2 class="mb-4 text-[28px] font-bold text-gray-900 dark:text-white">Список требуемых деталей из заказа</h2>
+        <table class="text-left text-gray-500 dark:text-gray-400"><thead class="text-gray-600 bg-gray-50 dark:bg-gray-600 dark:text-gray-400"><tr><th scope="col" rowspan="2" class="p-3 text-center">№</th>
+                    <th scope="col" colspan="2" class="p-3 text-center">Размер полотна</th>
+                    <th scope="col" rowspan="2" class="p-3 text-center">Сторона открывания</th>
+                    <th scope="col" rowspan="2" class="p-3 text-center">Коробка</th>
+                    <th scope="col" rowspan="2" class="p-3 text-center">Полотно</th>
+                    <th scope="col" rowspan="2" class="p-3 text-center">Цвет профиля и фурнитуры</th>
+                    <th scope="col" rowspan="2" class="p-3 text-center">Фрезеровка</th></tr>
+                <tr><th class="min-w-[100px] p-3 text-center">Длина, мм</th>
+                    <th class="min-w-[100px] p-3 text-center">Ширина, мм</th></tr></thead>
+            <tbody><tr class="border-b dark:bg-gray-700 dark:border-gray-600 hover:bg-[gray]/5 dark:hover:bg-gray-600"><th scope="row" class="px-3 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">1</th>
+                        <td class="px-2 py-4">
+
+
+<input id="widthPiece" type="text" name="widthPiece"  required placeholder="Введите длину детали..." title="Введите длину детали..." class="border border-gray-300
+                     focus:ring-primary-600 focus:border-primary-600 block
+                     dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
+                     undefined w-full text-gray-900 rounded-lg"></td>
+                        <td class="px-2 py-4 border-r">
+
+
+<input id="heightPiece" type="text" name="heightPiece"  required placeholder="Введите ширину детали..." title="Введите ширину детали..." class="border border-gray-300
+                     focus:ring-primary-600 focus:border-primary-600 block
+                     dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
+                     undefined w-full text-gray-900 rounded-lg"></td>
+                        <td class="px-3 py-4">
+
+
+
+
+
+<button id="dropdownDefaultButton" class="relative inline-flex justify-between items-center bg-[white] border border-[transparent]   rounded-lg  ring-1 ring-gray-300 focus:shadow-outline focus:ring-blue-600 focus:border-blue-600 w-full mt-[1px] px-[12px] py-[7px] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-gray" type="button" title="Выберите сторону открывания..."><input class="w-full bg-white" value="Выберите сторону открывания..." disabled>
+    <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path></svg></button>
+<div id="dropdown" hidden class="absolute z-10 bg-[white] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"><ul class="py-2 text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton"><li><a href="#" class="block px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200">Правое на себя</a>
+            </li></ul>
+</div></td>
+
+                        <td class="px-3 py-4">
+
+
+
+
+
+<button id="dropdownDefaultButton" class="relative inline-flex justify-between items-center bg-[white] border border-[transparent]   rounded-lg  ring-1 ring-gray-300 focus:shadow-outline focus:ring-blue-600 focus:border-blue-600 w-full mt-[1px] px-[12px] py-[7px] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-gray" type="button" title="Выберите коробку..."><input class="w-full bg-white" value="Выберите коробку..." disabled>
+    <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path></svg></button>
+<div id="dropdown" hidden class="absolute z-10 bg-[white] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"><ul class="py-2 text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton"><li><a href="#" class="block px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200">КСМ3</a>
+            </li><li><a href="#" class="block px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200">КСМ4</a>
+            </li></ul>
+</div></td>
+                        <td class="px-3 py-4">
+
+
+
+
+
+<button id="dropdownDefaultButton" class="relative inline-flex justify-between items-center bg-[white] border border-[transparent]   rounded-lg  ring-1 ring-gray-300 focus:shadow-outline focus:ring-blue-600 focus:border-blue-600 w-full mt-[1px] px-[12px] py-[7px] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-gray" type="button" title="Выберите полотно..."><input class="w-full bg-white" value="Выберите полотно..." disabled>
+    <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path></svg></button>
+<div id="dropdown" hidden class="absolute z-10 bg-[white] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"><ul class="py-2 text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton"><li><a href="#" class="block px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200">Торец 5</a>
+            </li><li><a href="#" class="block px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200">Торец 6</a>
+            </li></ul>
+</div></td>
+                        <td class="px-3 py-4">
+
+
+
+
+
+<button id="dropdownDefaultButton" class="relative inline-flex justify-between items-center bg-[white] border border-[transparent]   rounded-lg  ring-1 ring-gray-300 focus:shadow-outline focus:ring-blue-600 focus:border-blue-600 w-full mt-[1px] px-[12px] py-[7px] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-gray" type="button" title="Выберите цвет профиля и фурнитуры..."><input class="w-full bg-white" value="Выберите цвет профиля и фурнитуры..." disabled>
+    <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path></svg></button>
+<div id="dropdown" hidden class="absolute z-10 bg-[white] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"><ul class="py-2 text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton"><li><a href="#" class="block px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200">Серый</a>
+            </li><li><a href="#" class="block px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200">Белый</a>
+            </li></ul>
+</div></td>
+                        <td class="px-3 py-4">
+
+
+
+
+
+<button id="dropdownDefaultButton" class="relative inline-flex justify-between items-center bg-[white] border border-[transparent]   rounded-lg  ring-1 ring-gray-300 focus:shadow-outline focus:ring-blue-600 focus:border-blue-600 w-full mt-[1px] px-[12px] py-[7px] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-gray" type="button" title="Выберите фрезеровку..."><input class="w-full bg-white" value="Выберите фрезеровку..." disabled>
+    <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path></svg></button>
+<div id="dropdown" hidden class="absolute z-10 bg-[white] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"><ul class="py-2 text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton"><li><a href="#" class="block px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200">6360/38</a>
+            </li><li><a href="#" class="block px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200">B-Forty N62 WC</a>
+            </li></ul>
+</div></td>
+                    </tr></tbody></table>
+
+        <button class="inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 font-medium text-center float-right text-white bg-primary-600 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-700">+ Добавить строку
+        </button></div></section>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    </div></div></main></div>
+</div>
+
+
+			
+			<script>
+				{
+					__sveltekit_1c3jt3w = {
+						base: new URL(".", location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("./_app/immutable/entry/start.13e00a72.js"),
+						import("./_app/immutable/entry/app.de48be0e.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+</body>
+
+</html>
