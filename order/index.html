@@ -14,18 +14,19 @@
 <!--    <script src="../node_modules/flowbite/dist/flowbite.js"></script>-->
     <script src="https://cdn.tiny.cloud/1/a0ijmuegf97wcitfcjbqekt4zuq9huhhxhs82hblex68xzkd/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     
-		<link href="../_app/immutable/assets/0.ca5f2804.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/0.9a2fc6ac.css" rel="stylesheet">
 		<link href="../_app/immutable/assets/Img.1d121e74.css" rel="stylesheet">
-		<link rel="modulepreload" href="../_app/immutable/entry/start.7c910f7b.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/index.3856bc18.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.546c05d2.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/index.f5397308.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/app.4500ec77.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/0.c5c3065e.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/Img.b040798a.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/all-toast.store.a113fb1e.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/3.893de7de.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/local-storage.lib.6c7646c7.js">
+		<link href="../_app/immutable/assets/3.37c3d608.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.433855c6.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.8eacf69c.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.dcce4eab.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.bfa2c9bd.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.d149b29e.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.68de7436.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Img.d6a855d0.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/all-toast.store.897c6e97.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/3.3c6c5a56.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/ResultsForm.06c30ecc.js">
     <title>Формирование заказа | KLIMOV.RED</title>
 </head>
 <body data-sveltekit-preload-data="hover">
@@ -81,7 +82,7 @@
         
 
 
-<input id="creatingDate" type="text" name="creatingDate"  required placeholder="Выберите дату..." title="Выберите дату..." value="2023-09-12" class="border border-gray-300 text-sm
+<input id="creatingDate" type="text" name="creatingDate"  required placeholder="Выберите дату..." title="Выберите дату..." value="2023-09-13" class="border border-gray-300 text-sm
                      focus:ring-primary-600 focus:border-primary-600 block
                      dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
                       w-full text-gray-900 rounded-lg"></div></div>
@@ -221,16 +222,46 @@
 <div class="flex">
 
 
-<input id="hasEndFaceOrFrameCanvas" type="checkbox" name="hasEndFaceOrFrameCanvas" disabled required placeholder="" title="" class="border border-gray-300 text-sm
+<input id="hasEndFaceOrFrameCanvas" type="checkbox" name="hasEndFaceOrFrameCanvas"  required placeholder="" title="" class="border border-gray-300 text-sm
                      focus:ring-primary-600 focus:border-primary-600 block
                      dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
-                      mr-2  text-blue-600 w-4 h-4 rounded">
+                      mr-2  text-blue-600 w-4 h-4 rounded" checked>
         
 
 
 
-<label for="hasEndFaceOrFrameCanvas" class="text-sm block mb-2 text-gray-900 dark:text-white font-medium opacity-70">Торец/Каркас полотна</label></div>
-                    
+<label for="hasEndFaceOrFrameCanvas" class="text-sm block mb-2 text-gray-900 dark:text-white font-medium">Торец/Каркас полотна</label></div>
+                    <div class="ml-6 grid">
+
+
+
+<div class="flex">
+
+
+<input id="constructionTypetorec" type="radio" name="constructionTypetorec"  required placeholder="" title="" value="[object Object]" class="border border-gray-300 text-sm
+                     focus:ring-primary-600 focus:border-primary-600 block
+                     dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
+                      mr-2  text-blue-600 w-4 h-4 roundedrounded-full" checked>
+        
+
+
+
+<label for="constructionTypetorec" class="text-sm block mb-2 text-gray-900 dark:text-white font-medium">Торец</label></div>
+
+
+
+<div class="flex">
+
+
+<input id="constructionTypecarcas" type="radio" name="constructionTypecarcas" disabled required placeholder="" title="" value="[object Object]" class="border border-gray-300 text-sm
+                     focus:ring-primary-600 focus:border-primary-600 block
+                     dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
+                      mr-2  text-blue-600 w-4 h-4 roundedrounded-full">
+        
+
+
+
+<label for="constructionTypecarcas" class="text-sm block mb-2 text-gray-900 dark:text-white font-medium opacity-70">Каркас</label></div></div>
                     
 
 
@@ -352,8 +383,7 @@
 
                     <div class="ml-6 mt-2 grid gap-2"><h3 class="text-[20px] font-bold text-gray-900 dark:text-white">Коробка</h3>
 
-                        <div class="ml-6 grid gap-2"><h4 class="my-2 text-[16px] font-bold text-gray-900 dark:text-white">Отступы между коробкой и полотном, мм
-                            </h4>
+                        <div class="ml-6 grid gap-2"><h4 class="my-2 text-[16px] font-bold text-gray-900 dark:text-white">Отступы между коробкой и полотном, мм</h4>
 
                             <div class="ml-6 grid grid-cols-2 gap-2">
 
@@ -460,7 +490,7 @@
 <div class="flex">
 
 
-<input id="isForDoorsWithoutTopCrossbar" type="checkbox" name="isForDoorsWithoutTopCrossbar" disabled required placeholder="Для дверей без верхней поперечины, мм сверху" title="Для дверей без верхней поперечины, мм сверху" class="border border-gray-300 text-sm
+<input id="isForDoorsWithoutTopCrossbar" type="checkbox" name="isForDoorsWithoutTopCrossbar"  required placeholder="Для дверей без верхней поперечины, мм сверху" title="Для дверей без верхней поперечины, мм сверху" class="border border-gray-300 text-sm
                      focus:ring-primary-600 focus:border-primary-600 block
                      dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
                       mr-2  text-blue-600 w-4 h-4 rounded">
@@ -468,7 +498,7 @@
 
 
 
-<label for="isForDoorsWithoutTopCrossbar" class="text-sm block mb-2 text-gray-900 dark:text-white font-medium opacity-70">Для дверей без верхней поперечины, мм сверху</label></div>
+<label for="isForDoorsWithoutTopCrossbar" class="text-sm block mb-2 text-gray-900 dark:text-white font-medium">Для дверей без верхней поперечины, мм сверху</label></div>
                             </div></div>
                     <div class="ml-6 grid gap-2"><h3 class="mb-4 text-[20px] font-bold text-gray-900 dark:text-white">Торец</h3>
 
@@ -479,7 +509,57 @@
 <div class="flex">
 
 
-<input id="isEndFaceCuttingForCanvas" type="checkbox" name="isEndFaceCuttingForCanvas" disabled required placeholder="Пилим торец в размер полотна" title="Пилим торец в размер полотна" class="border border-gray-300 text-sm
+<input id="isEndFaceCuttingForCanvas" type="checkbox" name="isEndFaceCuttingForCanvas"  required placeholder="Пилим торец в размер полотна" title="Пилим торец в размер полотна" class="border border-gray-300 text-sm
+                     focus:ring-primary-600 focus:border-primary-600 block
+                     dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
+                      mr-2  text-blue-600 w-4 h-4 rounded" checked>
+        
+
+
+
+<label for="isEndFaceCuttingForCanvas" class="text-sm block mb-2 text-gray-900 dark:text-white font-medium">Пилим торец в размер полотна</label></div>
+                            <div class="ml-6 grid gap-2">
+
+
+
+<div class="flex">
+
+
+<input id="isEndFaceWithMargin" type="radio" name="isEndFaceWithMargin"  required placeholder="С запасом, мм" title="С запасом, мм" value="true" class="border border-gray-300 text-sm
+                     focus:ring-primary-600 focus:border-primary-600 block
+                     dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
+                      mr-2  text-blue-600 w-4 h-4 roundedrounded-full">
+        
+
+
+
+<label for="isEndFaceWithMargin" class="text-sm block mb-2 text-gray-900 dark:text-white font-medium">С запасом, мм</label></div>
+                                    
+                                    
+
+
+
+<div class="flex">
+
+
+<input id="isEndFaceWithOutMargin" type="radio" name="isEndFaceWithOutMargin"  required placeholder="С запилом под 45 (без запаса)" title="С запилом под 45 (без запаса)" value="false" class="border border-gray-300 text-sm
+                     focus:ring-primary-600 focus:border-primary-600 block
+                     dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
+                      mr-2  text-blue-600 w-4 h-4 roundedrounded-full" checked>
+        
+
+
+
+<label for="isEndFaceWithOutMargin" class="text-sm block mb-2 text-gray-900 dark:text-white font-medium">С запилом под 45 (без запаса)</label></div>
+
+                                    
+
+
+
+<div class="flex">
+
+
+<input id="isEndFaceContactsSpotCuttingForCanvas" type="checkbox" name="isEndFaceContactsSpotCuttingForCanvas"  required placeholder="Отрезаем контактные пятна, мм" title="Отрезаем контактные пятна, мм" class="border border-gray-300 text-sm
                      focus:ring-primary-600 focus:border-primary-600 block
                      dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
                       mr-2  text-blue-600 w-4 h-4 rounded">
@@ -487,8 +567,8 @@
 
 
 
-<label for="isEndFaceCuttingForCanvas" class="text-sm block mb-2 text-gray-900 dark:text-white font-medium opacity-70">Пилим торец в размер полотна</label></div>
-                            </div>
+<label for="isEndFaceContactsSpotCuttingForCanvas" class="text-sm block mb-2 text-gray-900 dark:text-white font-medium">Отрезаем контактные пятна, мм</label></div>
+                                    </div></div>
                         
 
 
@@ -496,7 +576,7 @@
 <div class="flex">
 
 
-<input id="isEndFaceMillingForHinges" type="checkbox" name="isEndFaceMillingForHinges" disabled required placeholder="Фрезеровка торца/каркаса под петли и замок" title="Фрезеровка торца/каркаса под петли и замок" class="border border-gray-300 text-sm
+<input id="isEndFaceMillingForHinges" type="checkbox" name="isEndFaceMillingForHinges"  required placeholder="Фрезеровка торца/каркаса под петли и замок" title="Фрезеровка торца/каркаса под петли и замок" class="border border-gray-300 text-sm
                      focus:ring-primary-600 focus:border-primary-600 block
                      dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
                       mr-2  text-blue-600 w-4 h-4 rounded">
@@ -504,7 +584,7 @@
 
 
 
-<label for="isEndFaceMillingForHinges" class="text-sm block mb-2 text-gray-900 dark:text-white font-medium opacity-70">Фрезеровка торца/каркаса под петли и замок</label></div>
+<label for="isEndFaceMillingForHinges" class="text-sm block mb-2 text-gray-900 dark:text-white font-medium">Фрезеровка торца/каркаса под петли и замок</label></div>
 
                         
 
@@ -513,7 +593,7 @@
 <div class="flex">
 
 
-<input id="isAtBottomCanvasStraightEndFace" type="checkbox" name="isAtBottomCanvasStraightEndFace" disabled required placeholder="На низ реверсивных полотен прямой торец" title="На низ реверсивных полотен прямой торец" class="border border-gray-300 text-sm
+<input id="isAtBottomCanvasStraightEndFace" type="checkbox" name="isAtBottomCanvasStraightEndFace"  required placeholder="На низ реверсивных полотен прямой торец" title="На низ реверсивных полотен прямой торец" class="border border-gray-300 text-sm
                      focus:ring-primary-600 focus:border-primary-600 block
                      dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
                       mr-2  text-blue-600 w-4 h-4 rounded">
@@ -521,7 +601,7 @@
 
 
 
-<label for="isAtBottomCanvasStraightEndFace" class="text-sm block mb-2 text-gray-900 dark:text-white font-medium opacity-70">На низ реверсивных полотен прямой торец</label></div>
+<label for="isAtBottomCanvasStraightEndFace" class="text-sm block mb-2 text-gray-900 dark:text-white font-medium">На низ реверсивных полотен прямой торец</label></div>
                         
 
 
@@ -529,7 +609,7 @@
 <div class="flex">
 
 
-<input id="isAtTopCanvasStraightEndFace" type="checkbox" name="isAtTopCanvasStraightEndFace" disabled required placeholder="На верх полотен без поперечины прямой торец" title="На верх полотен без поперечины прямой торец" class="border border-gray-300 text-sm
+<input id="isAtTopCanvasStraightEndFace" type="checkbox" name="isAtTopCanvasStraightEndFace"  required placeholder="На верх полотен без поперечины прямой торец" title="На верх полотен без поперечины прямой торец" class="border border-gray-300 text-sm
                      focus:ring-primary-600 focus:border-primary-600 block
                      dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
                       mr-2  text-blue-600 w-4 h-4 rounded">
@@ -537,12 +617,12 @@
 
 
 
-<label for="isAtTopCanvasStraightEndFace" class="text-sm block mb-2 text-gray-900 dark:text-white font-medium opacity-70">На верх полотен без поперечины прямой торец</label></div></div></div></form></div></section></div>
+<label for="isAtTopCanvasStraightEndFace" class="text-sm block mb-2 text-gray-900 dark:text-white font-medium">На верх полотен без поперечины прямой торец</label></div></div></div></form></div></section></div>
 
     
 
 
-<section class="animate__animated animate__fadeInDown animate__slower dark:bg-gray-900"><div class="p-4 mx-auto"><h2 class="mb-4 text-[28px] font-bold text-gray-900 dark:text-white">Список требуемых деталей</h2>
+<section class="overflow-auto lg:overflow-hidden animate__animated animate__fadeInDown animate__slower dark:bg-gray-900"><div class="p-4 mx-auto"><h2 class="mb-4 text-[28px] font-bold text-gray-900 dark:text-white">Список требуемых деталей</h2>
         <table class="text-left text-gray-500 dark:text-gray-400"><thead class="text-gray-600 dark:text-gray-400"><tr><th scope="col" colspan="5" class="p-3 text-center bg-gray-50 dark:bg-gray-600 border-2 ">Полотно</th>
                     <th scope="col" colspan="3" class="p-3 text-center bg-gray-50 dark:bg-gray-600 border-2 ">Коробка</th>
                     <th scope="col" rowspan="2" colspan="2" class="p-3 text-center bg-gray-50 dark:bg-gray-600 border-2 ">Фурнитура</th>
@@ -605,13 +685,13 @@
 
 
 
-<button id="dropdownDefaultButton" class="relative bg-[white] border border-[transparent] rounded-lg  text-sm z-0 ring-1 ring-gray-300 focus:shadow-outline focus:ring-blue-600 focus:border-blue-600 w-full mt-[1px] px-[12px] py-[7px] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-gray" type="button" title="Выберите тип торца..." disabled><div class="relative z-1 bg-[transparent] inline-flex justify-between items-center">
+<button id="dropdownDefaultButton" class="relative bg-[white] border border-[transparent] rounded-lg  text-sm z-0 ring-1 ring-gray-300 focus:shadow-outline focus:ring-blue-600 focus:border-blue-600 w-full mt-[1px] px-[12px] py-[7px] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-gray" type="button" title="Выберите тип торца..." ><div class="relative z-1 bg-[transparent] inline-flex justify-between items-center">
         <input class="z-[-1] w-full bg-white " value="Выберите тип торца..." disabled>
         <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path></svg></div></button>
-<div id="dropdown" hidden class="w-auto absolute z-10 bg-[white] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"><ul class="text-sm py-2 text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton"><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  text-white bg-primary-500 "><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="Торец 5 | 42"></div>
-                    Торец 5 | 42</a>
-            </li><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200"><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="Торец 6 | 62"></div>
-                    Торец 6 | 62</a>
+<div id="dropdown" hidden class="w-auto absolute z-10 bg-[white] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"><ul class="text-sm py-2 text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton"><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  text-white bg-primary-500 "><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="EddieWillers 42.1 | Прямой | 42"></div>
+                    EddieWillers 42.1 | Прямой | 42</a>
+            </li><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200"><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="Dagny Taggart 58.1 | С четвертью  | 58"></div>
+                    Dagny Taggart 58.1 | С четвертью  | 58</a>
             </li></ul>
 </div></td>
 
@@ -660,7 +740,7 @@
 
 
 
-<button id="dropdownDefaultButton" class="relative bg-[white] border border-[transparent] rounded-lg  text-sm z-0 ring-1 ring-gray-300 focus:shadow-outline focus:ring-blue-600 focus:border-blue-600 w-full mt-[1px] px-[12px] py-[7px] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-gray" type="button" title="Выберите материал..." disabled><div class="relative z-1 bg-[transparent] inline-flex justify-between items-center">
+<button id="dropdownDefaultButton" class="relative bg-[white] border border-[transparent] rounded-lg  text-sm z-0 ring-1 ring-gray-300 focus:shadow-outline focus:ring-blue-600 focus:border-blue-600 w-full mt-[1px] px-[12px] py-[7px] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-gray" type="button" title="Выберите материал..." ><div class="relative z-1 bg-[transparent] inline-flex justify-between items-center">
         <input class="z-[-1] w-full bg-white " value="Выберите материал..." disabled>
         <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path></svg></div></button>
 <div id="dropdown" hidden class="w-auto absolute z-10 bg-[white] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"><ul class="text-sm py-2 text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton"><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  text-white bg-primary-500 "><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="Алюминий"></div>
@@ -675,7 +755,7 @@
 
 
 
-<button id="dropdownDefaultButton" class="relative bg-[white] border border-[transparent] rounded-lg  text-sm z-0 ring-1 ring-gray-300 focus:shadow-outline focus:ring-blue-600 focus:border-blue-600 w-full mt-[1px] px-[12px] py-[7px] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-gray" type="button" title="Выберите покрытие..." disabled><div class="relative z-1 bg-[transparent] inline-flex justify-between items-center">
+<button id="dropdownDefaultButton" class="relative bg-[white] border border-[transparent] rounded-lg  text-sm z-0 ring-1 ring-gray-300 focus:shadow-outline focus:ring-blue-600 focus:border-blue-600 w-full mt-[1px] px-[12px] py-[7px] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-gray" type="button" title="Выберите покрытие..." ><div class="relative z-1 bg-[transparent] inline-flex justify-between items-center">
         <input class="z-[-1] w-full bg-white " value="Выберите покрытие..." disabled>
         <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path></svg></div></button>
 <div id="dropdown" hidden class="w-auto absolute z-10 bg-[white] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"><ul class="text-sm py-2 text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton"><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  text-white bg-primary-500 "><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="Зеленый"></div>
@@ -703,7 +783,7 @@
                     B-Forty N62 WC</a>
             </li></ul>
 </div></td>
-                        <td class="px-3 py-4 inline-flex gap-2"><button type="button" title="Скопировать строку" class="px-3 py-2 text-xl text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg">
+                        <td class="px-3 py-4 inline-flex gap-2"><button type="button" title="Клонировать строку" class="px-3 py-2 text-xl text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg">
 
 
 <svg class="w-4 h-4" aria-hidden="true" fill="transparent" viewBox="0 0 20 20" width="18" data-view-component="true"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m7.708 2.292.706-.706A2 2 0 0 1 9.828 1h6.239A.97.97 0 0 1 17 2v12a.97.97 0 0 1-.933 1H15M6 5v4a1 1 0 0 1-1 1H1m11-4v12a.97.97 0 0 1-.933 1H1.933A.97.97 0 0 1 1 18V9.828a2 2 0 0 1 .586-1.414l2.828-2.828A2 2 0 0 1 5.828 5h5.239A.97.97 0 0 1 12 6Z"></path></svg></button>
@@ -716,14 +796,173 @@
 
 
 
-<div id="accordion-collapse" data-accordion="collapse"><h2 id="accordion-collapse-heading-1"><button type="button" class="mt-2.5 flex items-center justify-between w-full p-5 font-medium text-left border border-gray-200 rounded-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1"><span>Схема для №1</span>
+<div id="accordion-collapse" data-accordion="collapse"><h2 id="accordion-collapse-heading-1"><button type="button" class="mt-2.5 relative flex items-center justify-between w-full p-5 font-medium text-left border border-gray-200 rounded-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1"><span>Схема для строки №1</span>
             <svg data-accordion-icon class="w-3 h-3  shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"></path></svg></button></h2>
     <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1"><div class="p-5 border border-gray-200 dark:border-gray-700 dark:bg-gray-900">
 
 
-<div id="drawContainer5ieJkV-hDRrvh4Osgk_Il" class="flex flex-col overflow-auto max-w-[80vw]"></div>
+<div id="drawContainerUchEGVxfzQmph6a_dlXHx" class="flex flex-col overflow-auto max-w-[100%]"></div>
                             </div></div></div></td>
                     </tr><tr class="border-b dark:bg-gray-700 dark:border-gray-600 hover:bg-[gray]/5 dark:hover:bg-gray-600"><th scope="row" class="px-3 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">2</th>
+                        <td class="px-2 py-4">
+
+
+<input id="heightPiece" type="text" name="heightPiece"  required placeholder="Введите высоту полотна..." title="Введите высоту полотна..." value="2000" class="border border-gray-300 text-sm
+                     focus:ring-primary-600 focus:border-primary-600 block
+                     dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
+                      w-full text-gray-900 rounded-lg"></td>
+                        <td class="px-2 py-4 border-r">
+
+
+<input id="widthPiece" type="text" name="widthPiece"  required placeholder="Введите ширину полотна..." title="Введите ширину полотна..." value="800" class="border border-gray-300 text-sm
+                     focus:ring-primary-600 focus:border-primary-600 block
+                     dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
+                      w-full text-gray-900 rounded-lg"></td>
+                        <td class="px-3 py-4">
+
+
+
+
+
+<button id="dropdownDefaultButton" class="relative bg-[white] border border-[transparent] rounded-lg  text-sm z-0 ring-1 ring-gray-300 focus:shadow-outline focus:ring-blue-600 focus:border-blue-600 w-full mt-[1px] px-[12px] py-[7px] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-gray" type="button" title="Выберите сторону открывания..." ><div class="relative z-1 bg-[transparent] inline-flex justify-between items-center">
+        <input class="z-[-1] w-full bg-white " value="Выберите сторону открывания..." disabled>
+        <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path></svg></div></button>
+<div id="dropdown" hidden class="w-auto absolute z-10 bg-[white] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"><ul class="text-sm py-2 text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton"><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  text-white bg-primary-500 "><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="Правая на себя"></div>
+                    Правая на себя</a>
+            </li><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200"><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="Правая от себя"></div>
+                    Правая от себя</a>
+            </li><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200"><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="Левая на себя"></div>
+                    Левая на себя</a>
+            </li><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200"><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="Левая от себя"></div>
+                    Левая от себя</a>
+            </li></ul>
+</div></td>
+
+                        <td class="px-3 py-4">
+
+
+
+
+
+<button id="dropdownDefaultButton" class="relative bg-[white] border border-[transparent] rounded-lg  text-sm z-0 ring-1 ring-gray-300 focus:shadow-outline focus:ring-blue-600 focus:border-blue-600 w-full mt-[1px] px-[12px] py-[7px] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-gray" type="button" title="Выберите тип торца..." ><div class="relative z-1 bg-[transparent] inline-flex justify-between items-center">
+        <input class="z-[-1] w-full bg-white " value="Выберите тип торца..." disabled>
+        <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path></svg></div></button>
+<div id="dropdown" hidden class="w-auto absolute z-10 bg-[white] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"><ul class="text-sm py-2 text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton"><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  text-white bg-primary-500 "><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="EddieWillers 42.1 | Прямой | 42"></div>
+                    EddieWillers 42.1 | Прямой | 42</a>
+            </li><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200"><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="Dagny Taggart 58.1 | С четвертью  | 58"></div>
+                    Dagny Taggart 58.1 | С четвертью  | 58</a>
+            </li></ul>
+</div></td>
+
+                        <td class="px-3 py-4">
+
+
+
+
+
+<button id="dropdownDefaultButton" class="relative bg-[white] border border-[transparent] rounded-lg  text-sm z-0 ring-1 ring-gray-300 focus:shadow-outline focus:ring-blue-600 focus:border-blue-600 w-full mt-[1px] px-[12px] py-[7px] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-gray" type="button" title="Выберите профиль коробки..." ><div class="relative z-1 bg-[transparent] inline-flex justify-between items-center">
+        <input class="z-[-1] w-full bg-white " value="Выберите профиль коробки..." disabled>
+        <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path></svg></div></button>
+<div id="dropdown" hidden class="w-auto absolute z-10 bg-[white] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"><ul class="text-sm py-2 text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton"><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  text-white bg-primary-500 "><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="HANK REARDEN 59 | 36 | 42.2 | 5000"></div>
+                    HANK REARDEN 59 | 36 | 42.2 | 5000</a>
+            </li><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200"><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="RAGNAR DANNESKJOLD 42 | 28.2 | 52.5 | 5000"></div>
+                    RAGNAR DANNESKJOLD 42 | 28.2 | 52.5 | 5000</a>
+            </li></ul>
+</div></td>
+                        <td class="px-3 py-4">
+
+
+
+
+
+<button id="dropdownDefaultButton" class="relative bg-[white] border border-[transparent] rounded-lg  text-sm z-0 ring-1 ring-gray-300 focus:shadow-outline focus:ring-blue-600 focus:border-blue-600 w-full mt-[1px] px-[12px] py-[7px] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-gray" type="button" title="Выберите вариант петель..." disabled><div class="relative z-1 bg-[transparent] inline-flex justify-between items-center">
+        <input class="z-[-1] w-full bg-white " value="Выберите вариант петель..." disabled>
+        <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path></svg></div></button>
+<div id="dropdown" hidden class="w-auto absolute z-10 bg-[white] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"><ul class="text-sm py-2 text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton"><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  text-white bg-primary-500 "><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="Петля 20х120"></div>
+                    Петля 20х120</a>
+            </li><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200"><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="Петля 40х100"></div>
+                    Петля 40х100</a>
+            </li><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200"><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="Петля 50х100"></div>
+                    Петля 50х100</a>
+            </li></ul>
+</div></td>
+                        <td class="px-3 py-4">
+
+
+<input id="volumeHinges" type="text" name="volumeHinges" disabled required placeholder="Введите количество петель..." title="Введите количество петель..." value="2" class="border border-gray-300 text-sm
+                     focus:ring-primary-600 focus:border-primary-600 block
+                     dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
+                      w-full text-gray-900 rounded-lg"></td>
+                        <td class="px-3 py-4">
+
+
+
+
+
+<button id="dropdownDefaultButton" class="relative bg-[white] border border-[transparent] rounded-lg  text-sm z-0 ring-1 ring-gray-300 focus:shadow-outline focus:ring-blue-600 focus:border-blue-600 w-full mt-[1px] px-[12px] py-[7px] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-gray" type="button" title="Выберите материал..." ><div class="relative z-1 bg-[transparent] inline-flex justify-between items-center">
+        <input class="z-[-1] w-full bg-white " value="Выберите материал..." disabled>
+        <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path></svg></div></button>
+<div id="dropdown" hidden class="w-auto absolute z-10 bg-[white] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"><ul class="text-sm py-2 text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton"><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  text-white bg-primary-500 "><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="Алюминий"></div>
+                    Алюминий</a>
+            </li><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200"><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="Сталь"></div>
+                    Сталь</a>
+            </li></ul>
+</div></td>
+                        <td class="px-3 py-4">
+
+
+
+
+
+<button id="dropdownDefaultButton" class="relative bg-[white] border border-[transparent] rounded-lg  text-sm z-0 ring-1 ring-gray-300 focus:shadow-outline focus:ring-blue-600 focus:border-blue-600 w-full mt-[1px] px-[12px] py-[7px] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-gray" type="button" title="Выберите покрытие..." ><div class="relative z-1 bg-[transparent] inline-flex justify-between items-center">
+        <input class="z-[-1] w-full bg-white " value="Выберите покрытие..." disabled>
+        <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path></svg></div></button>
+<div id="dropdown" hidden class="w-auto absolute z-10 bg-[white] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"><ul class="text-sm py-2 text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton"><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  text-white bg-primary-500 "><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="Зеленый"></div>
+                    Зеленый</a>
+            </li><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200"><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="Синий"></div>
+                    Синий</a>
+            </li><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200"><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="Серый"></div>
+                    Серый</a>
+            </li><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200"><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="Белый"></div>
+                    Белый</a>
+            </li></ul>
+</div></td>
+                        <td class="px-3 py-4">
+
+
+
+
+
+<button id="dropdownDefaultButton" class="relative bg-[white] border border-[transparent] rounded-lg  text-sm z-0 ring-1 ring-gray-300 focus:shadow-outline focus:ring-blue-600 focus:border-blue-600 w-full mt-[1px] px-[12px] py-[7px] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-gray" type="button" title="Выберите фрезеровку..." disabled><div class="relative z-1 bg-[transparent] inline-flex justify-between items-center">
+        <input class="z-[-1] w-full bg-white " value="Выберите фрезеровку..." disabled>
+        <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path></svg></div></button>
+<div id="dropdown" hidden class="w-auto absolute z-10 bg-[white] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"><ul class="text-sm py-2 text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton"><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  text-white bg-primary-500 "><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="6360/38"></div>
+                    6360/38</a>
+            </li><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200"><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="B-Forty N62 WC"></div>
+                    B-Forty N62 WC</a>
+            </li></ul>
+</div></td>
+                        <td class="px-3 py-4 inline-flex gap-2"><button type="button" title="Клонировать строку" class="px-3 py-2 text-xl text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg">
+
+
+<svg class="w-4 h-4" aria-hidden="true" fill="transparent" viewBox="0 0 20 20" width="18" data-view-component="true"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m7.708 2.292.706-.706A2 2 0 0 1 9.828 1h6.239A.97.97 0 0 1 17 2v12a.97.97 0 0 1-.933 1H15M6 5v4a1 1 0 0 1-1 1H1m11-4v12a.97.97 0 0 1-.933 1H1.933A.97.97 0 0 1 1 18V9.828a2 2 0 0 1 .586-1.414l2.828-2.828A2 2 0 0 1 5.828 5h5.239A.97.97 0 0 1 12 6Z"></path></svg></button>
+                            <button type="button" title="Удалить строку" class="px-3 py-2 text-xl text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg">
+
+
+<svg class="w-4 h-4" aria-hidden="true" fill="transparent" viewBox="0 0 20 20" width="18" data-view-component="true"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M1 5h16M7 8v8m4-8v8M7 1h4a1 1 0 0 1 1 1v3H6V2a1 1 0 0 1 1-1ZM3 5h12v13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5Z"></path></svg></button>
+                        </td></tr>
+                    <tr><td colspan="20">
+
+
+
+<div id="accordion-collapse" data-accordion="collapse"><h2 id="accordion-collapse-heading-1"><button type="button" class="mt-2.5 relative flex items-center justify-between w-full p-5 font-medium text-left border border-gray-200 rounded-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1"><span>Схема для строки №2</span>
+            <svg data-accordion-icon class="w-3 h-3  shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"></path></svg></button></h2>
+    <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1"><div class="p-5 border border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+
+
+<div id="drawContainergSHXkDWfQSBo9hEeJWwB-" class="flex flex-col overflow-auto max-w-[100%]"></div>
+                            </div></div></div></td>
+                    </tr><tr class="border-b dark:bg-gray-700 dark:border-gray-600 hover:bg-[gray]/5 dark:hover:bg-gray-600"><th scope="row" class="px-3 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">3</th>
                         <td class="px-2 py-4">
 
 
@@ -764,13 +1003,13 @@
 
 
 
-<button id="dropdownDefaultButton" class="relative bg-[white] border border-[transparent] rounded-lg  text-sm z-0 ring-1 ring-gray-300 focus:shadow-outline focus:ring-blue-600 focus:border-blue-600 w-full mt-[1px] px-[12px] py-[7px] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-gray" type="button" title="Выберите тип торца..." disabled><div class="relative z-1 bg-[transparent] inline-flex justify-between items-center">
+<button id="dropdownDefaultButton" class="relative bg-[white] border border-[transparent] rounded-lg  text-sm z-0 ring-1 ring-gray-300 focus:shadow-outline focus:ring-blue-600 focus:border-blue-600 w-full mt-[1px] px-[12px] py-[7px] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-gray" type="button" title="Выберите тип торца..." ><div class="relative z-1 bg-[transparent] inline-flex justify-between items-center">
         <input class="z-[-1] w-full bg-white " value="Выберите тип торца..." disabled>
         <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path></svg></div></button>
-<div id="dropdown" hidden class="w-auto absolute z-10 bg-[white] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"><ul class="text-sm py-2 text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton"><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  text-white bg-primary-500 "><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="Торец 5 | 42"></div>
-                    Торец 5 | 42</a>
-            </li><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200"><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="Торец 6 | 62"></div>
-                    Торец 6 | 62</a>
+<div id="dropdown" hidden class="w-auto absolute z-10 bg-[white] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"><ul class="text-sm py-2 text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton"><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  text-white bg-primary-500 "><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="EddieWillers 42.1 | Прямой | 42"></div>
+                    EddieWillers 42.1 | Прямой | 42</a>
+            </li><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200"><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="Dagny Taggart 58.1 | С четвертью  | 58"></div>
+                    Dagny Taggart 58.1 | С четвертью  | 58</a>
             </li></ul>
 </div></td>
 
@@ -819,7 +1058,7 @@
 
 
 
-<button id="dropdownDefaultButton" class="relative bg-[white] border border-[transparent] rounded-lg  text-sm z-0 ring-1 ring-gray-300 focus:shadow-outline focus:ring-blue-600 focus:border-blue-600 w-full mt-[1px] px-[12px] py-[7px] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-gray" type="button" title="Выберите материал..." disabled><div class="relative z-1 bg-[transparent] inline-flex justify-between items-center">
+<button id="dropdownDefaultButton" class="relative bg-[white] border border-[transparent] rounded-lg  text-sm z-0 ring-1 ring-gray-300 focus:shadow-outline focus:ring-blue-600 focus:border-blue-600 w-full mt-[1px] px-[12px] py-[7px] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-gray" type="button" title="Выберите материал..." ><div class="relative z-1 bg-[transparent] inline-flex justify-between items-center">
         <input class="z-[-1] w-full bg-white " value="Выберите материал..." disabled>
         <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path></svg></div></button>
 <div id="dropdown" hidden class="w-auto absolute z-10 bg-[white] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"><ul class="text-sm py-2 text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton"><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  text-white bg-primary-500 "><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="Алюминий"></div>
@@ -834,7 +1073,7 @@
 
 
 
-<button id="dropdownDefaultButton" class="relative bg-[white] border border-[transparent] rounded-lg  text-sm z-0 ring-1 ring-gray-300 focus:shadow-outline focus:ring-blue-600 focus:border-blue-600 w-full mt-[1px] px-[12px] py-[7px] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-gray" type="button" title="Выберите покрытие..." disabled><div class="relative z-1 bg-[transparent] inline-flex justify-between items-center">
+<button id="dropdownDefaultButton" class="relative bg-[white] border border-[transparent] rounded-lg  text-sm z-0 ring-1 ring-gray-300 focus:shadow-outline focus:ring-blue-600 focus:border-blue-600 w-full mt-[1px] px-[12px] py-[7px] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-gray" type="button" title="Выберите покрытие..." ><div class="relative z-1 bg-[transparent] inline-flex justify-between items-center">
         <input class="z-[-1] w-full bg-white " value="Выберите покрытие..." disabled>
         <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path></svg></div></button>
 <div id="dropdown" hidden class="w-auto absolute z-10 bg-[white] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"><ul class="text-sm py-2 text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton"><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  text-white bg-primary-500 "><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="Зеленый"></div>
@@ -862,7 +1101,7 @@
                     B-Forty N62 WC</a>
             </li></ul>
 </div></td>
-                        <td class="px-3 py-4 inline-flex gap-2"><button type="button" title="Скопировать строку" class="px-3 py-2 text-xl text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg">
+                        <td class="px-3 py-4 inline-flex gap-2"><button type="button" title="Клонировать строку" class="px-3 py-2 text-xl text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg">
 
 
 <svg class="w-4 h-4" aria-hidden="true" fill="transparent" viewBox="0 0 20 20" width="18" data-view-component="true"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m7.708 2.292.706-.706A2 2 0 0 1 9.828 1h6.239A.97.97 0 0 1 17 2v12a.97.97 0 0 1-.933 1H15M6 5v4a1 1 0 0 1-1 1H1m11-4v12a.97.97 0 0 1-.933 1H1.933A.97.97 0 0 1 1 18V9.828a2 2 0 0 1 .586-1.414l2.828-2.828A2 2 0 0 1 5.828 5h5.239A.97.97 0 0 1 12 6Z"></path></svg></button>
@@ -875,14 +1114,14 @@
 
 
 
-<div id="accordion-collapse" data-accordion="collapse"><h2 id="accordion-collapse-heading-1"><button type="button" class="mt-2.5 flex items-center justify-between w-full p-5 font-medium text-left border border-gray-200 rounded-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1"><span>Схема для №2</span>
+<div id="accordion-collapse" data-accordion="collapse"><h2 id="accordion-collapse-heading-1"><button type="button" class="mt-2.5 relative flex items-center justify-between w-full p-5 font-medium text-left border border-gray-200 rounded-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1"><span>Схема для строки №3</span>
             <svg data-accordion-icon class="w-3 h-3  shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"></path></svg></button></h2>
     <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1"><div class="p-5 border border-gray-200 dark:border-gray-700 dark:bg-gray-900">
 
 
-<div id="drawContainerTHpROftdiOdnuU0n7rZEA" class="flex flex-col overflow-auto max-w-[80vw]"></div>
+<div id="drawContainerCua8FqFdJWX0tQ5xa7hDl" class="flex flex-col overflow-auto max-w-[100%]"></div>
                             </div></div></div></td>
-                    </tr><tr class="border-b dark:bg-gray-700 dark:border-gray-600 hover:bg-[gray]/5 dark:hover:bg-gray-600"><th scope="row" class="px-3 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">3</th>
+                    </tr><tr class="border-b dark:bg-gray-700 dark:border-gray-600 hover:bg-[gray]/5 dark:hover:bg-gray-600"><th scope="row" class="px-3 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">4</th>
                         <td class="px-2 py-4">
 
 
@@ -923,13 +1162,13 @@
 
 
 
-<button id="dropdownDefaultButton" class="relative bg-[white] border border-[transparent] rounded-lg  text-sm z-0 ring-1 ring-gray-300 focus:shadow-outline focus:ring-blue-600 focus:border-blue-600 w-full mt-[1px] px-[12px] py-[7px] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-gray" type="button" title="Выберите тип торца..." disabled><div class="relative z-1 bg-[transparent] inline-flex justify-between items-center">
+<button id="dropdownDefaultButton" class="relative bg-[white] border border-[transparent] rounded-lg  text-sm z-0 ring-1 ring-gray-300 focus:shadow-outline focus:ring-blue-600 focus:border-blue-600 w-full mt-[1px] px-[12px] py-[7px] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-gray" type="button" title="Выберите тип торца..." ><div class="relative z-1 bg-[transparent] inline-flex justify-between items-center">
         <input class="z-[-1] w-full bg-white " value="Выберите тип торца..." disabled>
         <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path></svg></div></button>
-<div id="dropdown" hidden class="w-auto absolute z-10 bg-[white] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"><ul class="text-sm py-2 text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton"><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  text-white bg-primary-500 "><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="Торец 5 | 42"></div>
-                    Торец 5 | 42</a>
-            </li><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200"><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="Торец 6 | 62"></div>
-                    Торец 6 | 62</a>
+<div id="dropdown" hidden class="w-auto absolute z-10 bg-[white] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"><ul class="text-sm py-2 text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton"><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200"><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="EddieWillers 42.1 | Прямой | 42"></div>
+                    EddieWillers 42.1 | Прямой | 42</a>
+            </li><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  text-white bg-primary-500 "><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="Dagny Taggart 58.1 | С четвертью  | 58"></div>
+                    Dagny Taggart 58.1 | С четвертью  | 58</a>
             </li></ul>
 </div></td>
 
@@ -978,7 +1217,7 @@
 
 
 
-<button id="dropdownDefaultButton" class="relative bg-[white] border border-[transparent] rounded-lg  text-sm z-0 ring-1 ring-gray-300 focus:shadow-outline focus:ring-blue-600 focus:border-blue-600 w-full mt-[1px] px-[12px] py-[7px] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-gray" type="button" title="Выберите материал..." disabled><div class="relative z-1 bg-[transparent] inline-flex justify-between items-center">
+<button id="dropdownDefaultButton" class="relative bg-[white] border border-[transparent] rounded-lg  text-sm z-0 ring-1 ring-gray-300 focus:shadow-outline focus:ring-blue-600 focus:border-blue-600 w-full mt-[1px] px-[12px] py-[7px] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-gray" type="button" title="Выберите материал..." ><div class="relative z-1 bg-[transparent] inline-flex justify-between items-center">
         <input class="z-[-1] w-full bg-white " value="Выберите материал..." disabled>
         <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path></svg></div></button>
 <div id="dropdown" hidden class="w-auto absolute z-10 bg-[white] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"><ul class="text-sm py-2 text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton"><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  text-white bg-primary-500 "><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="Алюминий"></div>
@@ -993,7 +1232,7 @@
 
 
 
-<button id="dropdownDefaultButton" class="relative bg-[white] border border-[transparent] rounded-lg  text-sm z-0 ring-1 ring-gray-300 focus:shadow-outline focus:ring-blue-600 focus:border-blue-600 w-full mt-[1px] px-[12px] py-[7px] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-gray" type="button" title="Выберите покрытие..." disabled><div class="relative z-1 bg-[transparent] inline-flex justify-between items-center">
+<button id="dropdownDefaultButton" class="relative bg-[white] border border-[transparent] rounded-lg  text-sm z-0 ring-1 ring-gray-300 focus:shadow-outline focus:ring-blue-600 focus:border-blue-600 w-full mt-[1px] px-[12px] py-[7px] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-gray" type="button" title="Выберите покрытие..." ><div class="relative z-1 bg-[transparent] inline-flex justify-between items-center">
         <input class="z-[-1] w-full bg-white " value="Выберите покрытие..." disabled>
         <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path></svg></div></button>
 <div id="dropdown" hidden class="w-auto absolute z-10 bg-[white] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"><ul class="text-sm py-2 text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton"><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  text-white bg-primary-500 "><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="Зеленый"></div>
@@ -1021,7 +1260,7 @@
                     B-Forty N62 WC</a>
             </li></ul>
 </div></td>
-                        <td class="px-3 py-4 inline-flex gap-2"><button type="button" title="Скопировать строку" class="px-3 py-2 text-xl text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg">
+                        <td class="px-3 py-4 inline-flex gap-2"><button type="button" title="Клонировать строку" class="px-3 py-2 text-xl text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg">
 
 
 <svg class="w-4 h-4" aria-hidden="true" fill="transparent" viewBox="0 0 20 20" width="18" data-view-component="true"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m7.708 2.292.706-.706A2 2 0 0 1 9.828 1h6.239A.97.97 0 0 1 17 2v12a.97.97 0 0 1-.933 1H15M6 5v4a1 1 0 0 1-1 1H1m11-4v12a.97.97 0 0 1-.933 1H1.933A.97.97 0 0 1 1 18V9.828a2 2 0 0 1 .586-1.414l2.828-2.828A2 2 0 0 1 5.828 5h5.239A.97.97 0 0 1 12 6Z"></path></svg></button>
@@ -1034,12 +1273,171 @@
 
 
 
-<div id="accordion-collapse" data-accordion="collapse"><h2 id="accordion-collapse-heading-1"><button type="button" class="mt-2.5 flex items-center justify-between w-full p-5 font-medium text-left border border-gray-200 rounded-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1"><span>Схема для №3</span>
+<div id="accordion-collapse" data-accordion="collapse"><h2 id="accordion-collapse-heading-1"><button type="button" class="mt-2.5 relative flex items-center justify-between w-full p-5 font-medium text-left border border-gray-200 rounded-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1"><span>Схема для строки №4</span>
             <svg data-accordion-icon class="w-3 h-3  shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"></path></svg></button></h2>
     <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1"><div class="p-5 border border-gray-200 dark:border-gray-700 dark:bg-gray-900">
 
 
-<div id="drawContainersk519NO9FKUgNUO9XMefC" class="flex flex-col overflow-auto max-w-[80vw]"></div>
+<div id="drawContainert87scsB4tUgGRw0t4X-ZU" class="flex flex-col overflow-auto max-w-[100%]"></div>
+                            </div></div></div></td>
+                    </tr><tr class="border-b dark:bg-gray-700 dark:border-gray-600 hover:bg-[gray]/5 dark:hover:bg-gray-600"><th scope="row" class="px-3 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">5</th>
+                        <td class="px-2 py-4">
+
+
+<input id="heightPiece" type="text" name="heightPiece"  required placeholder="Введите высоту полотна..." title="Введите высоту полотна..." value="3000" class="border border-gray-300 text-sm
+                     focus:ring-primary-600 focus:border-primary-600 block
+                     dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
+                      w-full text-gray-900 rounded-lg"></td>
+                        <td class="px-2 py-4 border-r">
+
+
+<input id="widthPiece" type="text" name="widthPiece"  required placeholder="Введите ширину полотна..." title="Введите ширину полотна..." value="600" class="border border-gray-300 text-sm
+                     focus:ring-primary-600 focus:border-primary-600 block
+                     dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
+                      w-full text-gray-900 rounded-lg"></td>
+                        <td class="px-3 py-4">
+
+
+
+
+
+<button id="dropdownDefaultButton" class="relative bg-[white] border border-[transparent] rounded-lg  text-sm z-0 ring-1 ring-gray-300 focus:shadow-outline focus:ring-blue-600 focus:border-blue-600 w-full mt-[1px] px-[12px] py-[7px] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-gray" type="button" title="Выберите сторону открывания..." ><div class="relative z-1 bg-[transparent] inline-flex justify-between items-center">
+        <input class="z-[-1] w-full bg-white " value="Выберите сторону открывания..." disabled>
+        <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path></svg></div></button>
+<div id="dropdown" hidden class="w-auto absolute z-10 bg-[white] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"><ul class="text-sm py-2 text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton"><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  text-white bg-primary-500 "><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="Правая на себя"></div>
+                    Правая на себя</a>
+            </li><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200"><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="Правая от себя"></div>
+                    Правая от себя</a>
+            </li><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200"><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="Левая на себя"></div>
+                    Левая на себя</a>
+            </li><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200"><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="Левая от себя"></div>
+                    Левая от себя</a>
+            </li></ul>
+</div></td>
+
+                        <td class="px-3 py-4">
+
+
+
+
+
+<button id="dropdownDefaultButton" class="relative bg-[white] border border-[transparent] rounded-lg  text-sm z-0 ring-1 ring-gray-300 focus:shadow-outline focus:ring-blue-600 focus:border-blue-600 w-full mt-[1px] px-[12px] py-[7px] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-gray" type="button" title="Выберите тип торца..." ><div class="relative z-1 bg-[transparent] inline-flex justify-between items-center">
+        <input class="z-[-1] w-full bg-white " value="Выберите тип торца..." disabled>
+        <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path></svg></div></button>
+<div id="dropdown" hidden class="w-auto absolute z-10 bg-[white] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"><ul class="text-sm py-2 text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton"><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200"><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="EddieWillers 42.1 | Прямой | 42"></div>
+                    EddieWillers 42.1 | Прямой | 42</a>
+            </li><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  text-white bg-primary-500 "><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="Dagny Taggart 58.1 | С четвертью  | 58"></div>
+                    Dagny Taggart 58.1 | С четвертью  | 58</a>
+            </li></ul>
+</div></td>
+
+                        <td class="px-3 py-4">
+
+
+
+
+
+<button id="dropdownDefaultButton" class="relative bg-[white] border border-[transparent] rounded-lg  text-sm z-0 ring-1 ring-gray-300 focus:shadow-outline focus:ring-blue-600 focus:border-blue-600 w-full mt-[1px] px-[12px] py-[7px] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-gray" type="button" title="Выберите профиль коробки..." ><div class="relative z-1 bg-[transparent] inline-flex justify-between items-center">
+        <input class="z-[-1] w-full bg-white " value="Выберите профиль коробки..." disabled>
+        <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path></svg></div></button>
+<div id="dropdown" hidden class="w-auto absolute z-10 bg-[white] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"><ul class="text-sm py-2 text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton"><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  text-white bg-primary-500 "><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="HANK REARDEN 59 | 36 | 42.2 | 5000"></div>
+                    HANK REARDEN 59 | 36 | 42.2 | 5000</a>
+            </li><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200"><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="RAGNAR DANNESKJOLD 42 | 28.2 | 52.5 | 5000"></div>
+                    RAGNAR DANNESKJOLD 42 | 28.2 | 52.5 | 5000</a>
+            </li></ul>
+</div></td>
+                        <td class="px-3 py-4">
+
+
+
+
+
+<button id="dropdownDefaultButton" class="relative bg-[white] border border-[transparent] rounded-lg  text-sm z-0 ring-1 ring-gray-300 focus:shadow-outline focus:ring-blue-600 focus:border-blue-600 w-full mt-[1px] px-[12px] py-[7px] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-gray" type="button" title="Выберите вариант петель..." disabled><div class="relative z-1 bg-[transparent] inline-flex justify-between items-center">
+        <input class="z-[-1] w-full bg-white " value="Выберите вариант петель..." disabled>
+        <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path></svg></div></button>
+<div id="dropdown" hidden class="w-auto absolute z-10 bg-[white] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"><ul class="text-sm py-2 text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton"><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  text-white bg-primary-500 "><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="Петля 20х120"></div>
+                    Петля 20х120</a>
+            </li><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200"><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="Петля 40х100"></div>
+                    Петля 40х100</a>
+            </li><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200"><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="Петля 50х100"></div>
+                    Петля 50х100</a>
+            </li></ul>
+</div></td>
+                        <td class="px-3 py-4">
+
+
+<input id="volumeHinges" type="text" name="volumeHinges" disabled required placeholder="Введите количество петель..." title="Введите количество петель..." value="2" class="border border-gray-300 text-sm
+                     focus:ring-primary-600 focus:border-primary-600 block
+                     dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500
+                      w-full text-gray-900 rounded-lg"></td>
+                        <td class="px-3 py-4">
+
+
+
+
+
+<button id="dropdownDefaultButton" class="relative bg-[white] border border-[transparent] rounded-lg  text-sm z-0 ring-1 ring-gray-300 focus:shadow-outline focus:ring-blue-600 focus:border-blue-600 w-full mt-[1px] px-[12px] py-[7px] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-gray" type="button" title="Выберите материал..." ><div class="relative z-1 bg-[transparent] inline-flex justify-between items-center">
+        <input class="z-[-1] w-full bg-white " value="Выберите материал..." disabled>
+        <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path></svg></div></button>
+<div id="dropdown" hidden class="w-auto absolute z-10 bg-[white] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"><ul class="text-sm py-2 text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton"><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  text-white bg-primary-500 "><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="Алюминий"></div>
+                    Алюминий</a>
+            </li><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200"><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="Сталь"></div>
+                    Сталь</a>
+            </li></ul>
+</div></td>
+                        <td class="px-3 py-4">
+
+
+
+
+
+<button id="dropdownDefaultButton" class="relative bg-[white] border border-[transparent] rounded-lg  text-sm z-0 ring-1 ring-gray-300 focus:shadow-outline focus:ring-blue-600 focus:border-blue-600 w-full mt-[1px] px-[12px] py-[7px] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-gray" type="button" title="Выберите покрытие..." ><div class="relative z-1 bg-[transparent] inline-flex justify-between items-center">
+        <input class="z-[-1] w-full bg-white " value="Выберите покрытие..." disabled>
+        <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path></svg></div></button>
+<div id="dropdown" hidden class="w-auto absolute z-10 bg-[white] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"><ul class="text-sm py-2 text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton"><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  text-white bg-primary-500 "><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="Зеленый"></div>
+                    Зеленый</a>
+            </li><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200"><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="Синий"></div>
+                    Синий</a>
+            </li><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200"><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="Серый"></div>
+                    Серый</a>
+            </li><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200"><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="Белый"></div>
+                    Белый</a>
+            </li></ul>
+</div></td>
+                        <td class="px-3 py-4">
+
+
+
+
+
+<button id="dropdownDefaultButton" class="relative bg-[white] border border-[transparent] rounded-lg  text-sm z-0 ring-1 ring-gray-300 focus:shadow-outline focus:ring-blue-600 focus:border-blue-600 w-full mt-[1px] px-[12px] py-[7px] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-gray" type="button" title="Выберите фрезеровку..." disabled><div class="relative z-1 bg-[transparent] inline-flex justify-between items-center">
+        <input class="z-[-1] w-full bg-white " value="Выберите фрезеровку..." disabled>
+        <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path></svg></div></button>
+<div id="dropdown" hidden class="w-auto absolute z-10 bg-[white] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"><ul class="text-sm py-2 text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton"><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  text-white bg-primary-500 "><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="6360/38"></div>
+                    6360/38</a>
+            </li><li><a href="#" class="flex items-center px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white  hover:bg-gray-200"><div hidden class="divide-x-2 pr-2 mr-2 border-r"><img class="h-auto max-w-full w-9 h-9  rounded-full bg-gray-100 text-green-500" alt="B-Forty N62 WC"></div>
+                    B-Forty N62 WC</a>
+            </li></ul>
+</div></td>
+                        <td class="px-3 py-4 inline-flex gap-2"><button type="button" title="Клонировать строку" class="px-3 py-2 text-xl text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg">
+
+
+<svg class="w-4 h-4" aria-hidden="true" fill="transparent" viewBox="0 0 20 20" width="18" data-view-component="true"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m7.708 2.292.706-.706A2 2 0 0 1 9.828 1h6.239A.97.97 0 0 1 17 2v12a.97.97 0 0 1-.933 1H15M6 5v4a1 1 0 0 1-1 1H1m11-4v12a.97.97 0 0 1-.933 1H1.933A.97.97 0 0 1 1 18V9.828a2 2 0 0 1 .586-1.414l2.828-2.828A2 2 0 0 1 5.828 5h5.239A.97.97 0 0 1 12 6Z"></path></svg></button>
+                            <button type="button" title="Удалить строку" class="px-3 py-2 text-xl text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg">
+
+
+<svg class="w-4 h-4" aria-hidden="true" fill="transparent" viewBox="0 0 20 20" width="18" data-view-component="true"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M1 5h16M7 8v8m4-8v8M7 1h4a1 1 0 0 1 1 1v3H6V2a1 1 0 0 1 1-1ZM3 5h12v13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5Z"></path></svg></button>
+                        </td></tr>
+                    <tr><td colspan="20">
+
+
+
+<div id="accordion-collapse" data-accordion="collapse"><h2 id="accordion-collapse-heading-1"><button type="button" class="mt-2.5 relative flex items-center justify-between w-full p-5 font-medium text-left border border-gray-200 rounded-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1"><span>Схема для строки №5</span>
+            <svg data-accordion-icon class="w-3 h-3  shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"></path></svg></button></h2>
+    <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1"><div class="p-5 border border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+
+
+<div id="drawContainerIg2a31dtX8LISA5GjYUVu" class="flex flex-col overflow-auto max-w-[100%]"></div>
                             </div></div></div></td>
                     </tr></tbody></table>
 
@@ -1053,13 +1451,20 @@
 <svg aria-hidden="true" fill="transparent" viewBox="1 0 25 22" width="25" data-view-component="true"><path stroke="white" stroke-linecap="round" stroke-width="2" d="M7.24 7.194a24.16 24.16 0 0 1 3.72-3.062m0 0c3.443-2.277 6.732-2.969 8.24-1.46 2.054 2.053.03 7.407-4.522 11.959-4.552 4.551-9.906 6.576-11.96 4.522C1.223 17.658 1.89 14.412 4.121 11m6.838-6.868c-3.443-2.277-6.732-2.969-8.24-1.46-2.054 2.053-.03 7.407 4.522 11.959m3.718-10.499a24.16 24.16 0 0 1 3.719 3.062M17.798 11c2.23 3.412 2.898 6.658 1.402 8.153-1.502 1.503-4.771.822-8.2-1.433m1-6.808a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>
                 Запустить расчет
             </button></div>
-        </div></section>
+        
+        
+        <div class="flex gap-2 justify-end mt-10"><button class="gap-1 inline-flex items-center px-5 py-2.5 font-medium text-center float-right text-white bg-primary-600 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-700">Посмотреть отчет в окне
+            </button>
 
-<button class="gap-1 inline-flex items-center px-5 py-2.5 font-medium text-center float-right text-white bg-primary-600 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-700">
+            <button class="gap-1 px-5 py-2.5 font-medium text-center float-right text-white bg-primary-600 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-700"><a target="_blank" href="/report" class="inline-flex items-center">
 
 
 <svg class="" aria-hidden="true" fill="transparent" viewBox="0 0 20 20" width="18" data-view-component="true"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M1 18a.969.969 0 0 0 .933 1h12.134A.97.97 0 0 0 15 18M1 7V5.828a2 2 0 0 1 .586-1.414l2.828-2.828A2 2 0 0 1 5.828 1h8.239A.97.97 0 0 1 15 2v5M6 1v4a1 1 0 0 1-1 1H1m0 9v-5h1.5a1.5 1.5 0 1 1 0 3H1m12 2v-5h2m-2 3h2m-8-3v5h1.375A1.626 1.626 0 0 0 10 13.375v-1.75A1.626 1.626 0 0 0 8.375 10H7Z"></path></svg> Показать отчет
-</button></div>
+                </a></button></div></div></section>
+
+
+<dialog class=" svelte-1jloh36">
+</dialog></div>
 
                         <hr class="mt-[300px]">
                         
@@ -1073,7 +1478,7 @@
 			
 			<script>
 				{
-					__sveltekit_1g7ixwe = {
+					__sveltekit_58i89e = {
 						base: new URL("..", location).pathname.slice(0, -1),
 						env: {}
 					};
@@ -1083,8 +1488,8 @@
 					const data = [null,null];
 
 					Promise.all([
-						import("../_app/immutable/entry/start.7c910f7b.js"),
-						import("../_app/immutable/entry/app.4500ec77.js")
+						import("../_app/immutable/entry/start.433855c6.js"),
+						import("../_app/immutable/entry/app.d149b29e.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 3],
